@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+section{
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.lm{
+                position: absolute;
+            top: 30px;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 0 10px 10px 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0,0.5),
+                        0 0 40px rgba(0, 0, 0, 0.4) inset;
+}
+div{
+    width: 600px;
+}
+[type=radio]{
+    display: none;
+    width: 100px;
+}
+label{
+    width: 0px;
+    cursor: pointer;
+    float: left;
+    width: 100px;
+    height: 0px;
+    text-align: center;
+    border-bottom: 30px solid orange;
+    border-right: 30px solid transparent;
+    color: white;
+    font-size: 20px;
+    font-family: cheri;
+    line-height: 1.5;
+    border-radius: 5px 0 0 0;
+}
+#r1:checked+[for=r1],#r2:checked+[for=r2],#r3:checked+[for=r3]{
+    border-bottom-color: skyblue;
+}
+div.lm div{
+    position: absolute;
+    left: 500px;
+    font-family: 'Nanum Pen Script';
+    font-size: 30px;
+}
+p.title{
+    text-shadow: 2px 2px 3px lightgreen;
+    color:green;
+}
+#r1:checked~.lm div:first-child,
+#r2:checked~.lm div:nth-child(2),
+#r3:checked~.lm div:last-child{
+    left:20px;
+}
+</style>
+</head>
+<body>
+    <section>
+        <input type="radio" id="r1" name="rn">
+        <label for="r1"></label>
+        <input type="radio" id="r2" name="rn">
+        <label for="r2"></label>
+        <input type="radio" id="r3" name="rn">
+        <label for="r3"></label>
+        <div class="lm">
+            <div>
+                <p><span class="title">정보수정</span></p>
+                
+            </div>
+            <div>
+                <p><span class="title">dasaf</span></p>
+                dtdtdasasa
+            </div>
+            <div>
+                <p><span class="title">dasasasaaf</span></p>
+                dtdtdasasas
+            </div>
+    </section>
+
+
+
+</body>
+</html>

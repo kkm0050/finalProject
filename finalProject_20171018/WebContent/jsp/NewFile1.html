@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	dl {
+   position: relative;
+}
+dt {
+   height: 30px;
+   float: left;
+   width: 50px;
+   z-index: 9;
+   position: relative;
+   cursor: pointer;
+}
+dd {
+   position: absolute;
+   padding-top: 30px;
+   background-color: #f3f3f3;
+   width: 150px;
+   height: 200px;
+}
+dd.hidden {
+   display: none;
+}
+</style>
+</head>
+<body>
+<dl>
+   <dt>Menu 1</dt>
+   <dd>
+      첫번째 탭메뉴 내용은 여기
+   </dd>
+
+   <dt>Menu  2</dt>
+   <dd class="hidden">
+      두번째 탭메뉴 내용은 여기
+   </dd>
+</dl>
+<script type="text/javascript">
+   var $menuEle = $('dt'); // 탭메뉴를 변수에 지정
+   $menuEle. click(function() { // 탭메뉴 클릭 이벤트
+      $('dd').addClass('hidden');
+      $(this).next().removeClass('hidden');
+   })
+</script>
+</body>
+</html>
